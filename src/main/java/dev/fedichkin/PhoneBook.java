@@ -32,6 +32,6 @@ public class PhoneBook {
     }
 
     public String findByName(String value) {
-        return null;
+        return phoneBookMap.getOrDefault(value, null);
     }
 }
