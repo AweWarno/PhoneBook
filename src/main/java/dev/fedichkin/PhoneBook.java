@@ -2,6 +2,7 @@ package dev.fedichkin;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class PhoneBook {
     private Map<String, String> phoneBookMap = new HashMap<>();
@@ -34,4 +35,10 @@ public class PhoneBook {
     public String findByName(String value) {
         return phoneBookMap.getOrDefault(value, null);
     }
+
+    public void printAllNames() {
+        Map<String, String> sortedMap = new TreeMap<>(phoneBookMap);
+        System.out.println(sortedMap);
+    }
+
 }
