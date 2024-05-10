@@ -25,7 +25,13 @@ public class PhoneBook {
     }
 
     public String findByNumber(String value) {
+        return phoneBookMap.entrySet().stream()
+                .filter(entry -> value.equals(entry.getValue()))
+                .findFirst().map(Map.Entry::getKey)
+                .orElse(null);
+    }
 
-        return phoneBookMap.getOrDefault(value, null);
+    public String findByName(String value) {
+        return null;
     }
 }

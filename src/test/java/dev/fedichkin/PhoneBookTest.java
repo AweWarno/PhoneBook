@@ -24,6 +24,15 @@ class PhoneBookTest {
         Map<String, String> map = new HashMap<>();
         map.put("test", "111111");
         phoneBook.add(map);
-        Assertions.assertNotNull(phoneBook.findByNumber("test"));
+        Assertions.assertNotNull(phoneBook.findByNumber("111111"));
+    }
+
+    @Test
+    void testFindByName() {
+        PhoneBook phoneBook = new PhoneBook();
+        Map<String, String> map = new HashMap<>();
+        map.put("test", "111111");
+        phoneBook.add(map);
+        Assertions.assertNotNull(phoneBook.findByName("test"));
     }
 }
