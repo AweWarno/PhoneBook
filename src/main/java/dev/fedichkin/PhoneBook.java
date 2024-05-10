@@ -1,2 +1,4 @@
-package dev.fedichkin;public class PhoneBook {
+package dev.fedichkin;
+
+public class PhoneBook {
 }
