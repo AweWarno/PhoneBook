@@ -1,12 +1,10 @@
 package dev.fedichkin;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
-    Map<String, String> phoneBookMap = new HashMap<>();
+    private Map<String, String> phoneBookMap = new HashMap<>();
 
     public int add(Map<String, String> value) {
         int count = 0;
@@ -26,7 +24,8 @@ public class PhoneBook {
         return count;
     }
 
-    public Map.Entry<String, String> findByNumber() {
-        return null;
+    public String findByNumber(String value) {
+
+        return phoneBookMap.getOrDefault(value, null);
     }
 }
